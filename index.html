@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Task 0-->
+    <script>
+        $(document).ready(function() {
+            console.log("jQuery is ready!");
+        });
+     </script>
+
+    <!--Task 1-->
+    <div class="box">
+        <h1 id="main_phrase">So hard to find</h1>
+    <h2 class="all_sub_topics">And i make it so easy to fall in loooove</h2>
+    <h3>Who says that?</h3>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#main_phrase")
+                .text("There is no such thing as a failure!")
+                .css("color", "whight");
+            $(".all_sub_topics")
+                .html("<em>It's just the life thay trying to move us in another direction</em>")
+                .css("font-style", "italic")
+            $("h3").text("Oprah Winfrey").css({
+                "color": "green",
+                "font-size": "18px"
+            });
+        });
+    </script>
+
+    <!--Task 2-->
+    <div class="box">
+        <p id="text_show"> Oprah Winfrey is a is an American media executive, actress, producer, and philanthropist</p>
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <button id="toggle">Toggle</button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#show").click(function() {
+                $("#text_show").show("1000");
+            });
+            $("#hide").click(function(){
+                $("#text_show").hide("1000");
+            });
+            $("#toggle").click(function(){
+                $("#text_show").toggle("slow");
+            });
+        });
+    </script>
+
+    <!--Task 3-->
+    <div id="box-special">
+        <p>The photo of Orpha Winfrey</p>
+        <button id="btn-In">click_I</button>
+        <button id="btn-Out">click_O</button>
+        <img id="photo_W" src="78.jpg">
+        <button id="btn-Tog">Toggle</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn-In").click(function(){
+                $("#photo_W").fadeIn("slow");
+            });
+        });
+            $("btn-Out").click(function(){
+                $("#photo_W").fadeOut();
+            });
+            $("btn-Tog").click(function(){
+                $("#photo_W").fadeToggle();
+            });
+    </script>
+    <!--Task 4-->
+    <div class="box">
+        <div id="flip"><b>Click to slide some facts about her:</b></div>
+        <div id="panel">
+            <ul>
+                <li>Oprah’s birth name was Orpah Gayle Winfrey, but it was often mispronounced, so “Oprah” became her name.</li>
+                <li>She was the first African-American woman self-made billionaire.</li>
+                <li>At 19 years old, she became the youngest and first African-American woman news anchor at WTVF-TV in Nashville, Tennessee.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            });
+            $("#flip").click(function(){
+                $("#panel").slideUp("slow");
+            });
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+
+
+</body>
+</html>
