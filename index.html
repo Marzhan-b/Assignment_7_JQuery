@@ -6,106 +6,121 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!--Task 0-->
-    <script>
-        $(document).ready(function() {
-            console.log("jQuery is ready!");
-        });
-     </script>
-
     <!--Task 1-->
     <div class="box">
         <h1 id="main_phrase">So hard to find</h1>
-    <h2 class="all_sub_topics">And i make it so easy to fall in loooove</h2>
-    <h3>Who says that?</h3>
+        <h2 class="all_sub_topics">And i make it so easy to fall in loooove</h2>
+        <h3>Who says that?</h3>
     </div>
-
-    <script>
-        $(document).ready(function() {
-            $("#main_phrase")
-                .text("There is no such thing as a failure!")
-                .css("color", "whight");
-            $(".all_sub_topics")
-                .html("<em>It's just the life thay trying to move us in another direction</em>")
-                .css("font-style", "italic")
-            $("h3").text("Oprah Winfrey").css({
-                "color": "green",
-                "font-size": "18px"
-            });
-        });
-    </script>
 
     <!--Task 2-->
     <div class="box">
-        <p id="text_show"> Oprah Winfrey is a is an American media executive, actress, producer, and philanthropist</p>
-        <button id="show">Show</button>
+        <p id="text_show">The best period of my life is 2024 spring!!!!!</p>
         <button id="hide">Hide</button>
+        <button id="show">Show</button>
         <button id="toggle">Toggle</button>
     </div>
-    <script>
-        $(document).ready(function() {
-            $("#show").click(function() {
-                $("#text_show").show("1000");
-            });
-            $("#hide").click(function(){
-                $("#text_show").hide("1000");
-            });
-            $("#toggle").click(function(){
-                $("#text_show").toggle("slow");
-            });
-        });
-    </script>
 
     <!--Task 3-->
     <div id="box-special">
-        <p>The photo of Orpha Winfrey</p>
+        <img id="photo_W" src="photos/me.jpg" style="display:none;">
         <button id="btn-In">click_I</button>
         <button id="btn-Out">click_O</button>
-        <img id="photo_W" src="78.jpg">
         <button id="btn-Tog">Toggle</button>
     </div>
 
-    <script>
-        $(document).ready(function(){
-            $("#btn-In").click(function(){
-                $("#photo_W").fadeIn("slow");
-            });
-        });
-            $("btn-Out").click(function(){
-                $("#photo_W").fadeOut();
-            });
-            $("btn-Tog").click(function(){
-                $("#photo_W").fadeToggle();
-            });
-    </script>
     <!--Task 4-->
     <div class="box">
-        <div id="flip"><b>Click to slide some facts about her:</b></div>
+        <div><b>Song:Kozy Korpesh-Bayan Sulu</b></div>
         <div id="panel">
-            <ul>
-                <li>Oprah’s birth name was Orpah Gayle Winfrey, but it was often mispronounced, so “Oprah” became her name.</li>
-                <li>She was the first African-American woman self-made billionaire.</li>
-                <li>At 19 years old, she became the youngest and first African-American woman news anchor at WTVF-TV in Nashville, Tennessee.</li>
-            </ul>
+            Zhanym dese senesin be,
+            Zholda turgan kedergimdi zhenesin be,
+            Sen menin zhalgyzymsyn sezesin be?
+        </div>
+        <button id="btnDown">Slide Down</button>
+        <button id="btnUp">Slide Up</button>
+        <button id="btnToggle">Slide Toggle</button>
+    </div>
+
+    <!--Task 5-->
+    <div class="box">
+    <p>My sheduule</p>
+    <ul>
+        <li>WEB</li>
+        <li>Software Design Patterns</li>
+    </ul>
+
+    <button id="btn-1">Append list</button>
+    <button id="btn-2">Prepend list</button>
+    <button id="btn-3">Remove list</button>
+    </div>
+    
+    <!--Task 6-->
+    <div class="box">
+        <img id="Vinetka-Image" src="photos/vinetka.jpg" >
+        <button id="vinetka">change to peek-a-boo</button>
+
+        <a id="link" href="https://lms.astanait.edu.kz/" target="_blank">Moodle</a>
+        <button id="lms">change to Du</button>
+    </div>
+
+    <!--Task 7-->
+    <div class="box">
+        <h4>Form Interaction</h4>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"><br><br>
+        </form>
+
+        <p>Name: <span id="display-name"></span></p>
+        <p>Email: <span id="display-email"></span></p>
+    </div>
+
+    <!--Task 8-->
+    <div class="box">
+        <div id="square"></div>
+        <button id="animateBtn">Animate Square</button>
+    </div>
+
+    <!--Task 9-->
+    <div class="box">
+        <div id="box9"></div>
+    <button id="start9">Start Animation</button>
+    </div>
+
+
+    <!-- Task 10 -->
+     <div class="box">
+        <div id="box10"></div>
+        <button id="start10">Animate All</button>
+     </div>
+
+
+    <!--Task 11-->
+    <div class="box">
+        <h2 class="gallery-title">Autumn Vibe</h2>
+        <div class="gallery">
+            <img src="photos/ast.jpg" class="thumb">
+            <img src="photos/mm.jpg" class="thumb">
+            <img src="photos/kvest.jpg" class="thumb">
+        </div>
+
+        <div id="modal">
+            <img id="modalImg">
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $("#flip").click(function(){
-                $("#panel").slideDown("slow");
-            });
-            $("#flip").click(function(){
-                $("#panel").slideUp("slow");
-            });
-            $("#flip").click(function(){
-                $("#panel").slideToggle("slow");
-            });
-        });
-    </script>
 
+
+
+<script src="jQuery.js"></script>
 
 </body>
 </html>
